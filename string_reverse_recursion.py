@@ -19,8 +19,26 @@ def reverse_aproach_2(input,index,size):
     print(temp,end='')
 
 size = len(input_value)
+print('')
 print('Approach 2')
 reverse_aproach_2(input_value,0,size)
+
+# ********************* approach 3 ********************************
+def get_reverse_string(input,size):
+    if size<1:
+        return
+    if size ==1:
+        return input[0]
+    return input[size-1]+get_reverse_string(input,size-1)
+
+if __name__ == "__main__":
+    print('')
+    print('Approch 3')
+    input_str = 'Communication'
+    size = len(input_str)
+    print(get_reverse_string(input_str,size))
+
+
 
 
 
